@@ -1,0 +1,131 @@
+/* src/styles/Navbar.css */
+.navbar {
+  background-color: #2c3e50;
+  color: white;
+  height: 8vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Allow elements to wrap on smaller screens */
+}
+
+.navbar h1 {
+  margin: 0;
+  font-size: 1.5rem; /* Adjust font size for small screens */
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+}
+
+.navbar li {
+  display: inline;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+
+.navbar a:hover {
+  background-color: #2c3e50;
+}
+
+.welcome-container {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.welcome-container span {
+  margin-right: 8px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #34495e;
+  border-radius: 4px;
+  min-width: 150px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1000; /* Ensure it appears above other elements */
+}
+
+.logout-btn {
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.disabled {
+  color: #ccc;
+  pointer-events: none; /* Prevent clicking */
+  text-decoration: none;
+}
+
+/* Media queries for responsive design */
+
+/* For small screens (mobile devices) */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navbar h1 {
+    font-size: 1.2rem; /* Smaller font size for mobile */
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .navbar a {
+    padding: 10px 15px; /* Adjust padding for mobile */
+  }
+
+  .welcome-container {
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .dropdown-menu {
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+
+/* For very small screens (portrait mobile devices) */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 15px;
+  }
+
+  .navbar h1 {
+    font-size: 1.1rem;
+  }
+
+  .navbar ul {
+    gap: 8px;
+  }
+
+  .navbar a {
+    padding: 8px 10px;
+  }
+}
